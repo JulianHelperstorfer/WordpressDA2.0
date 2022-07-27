@@ -63,8 +63,6 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 
 ?>
 
-
-
 <div id="tribe-events-content" class="tribe-events-single">
 
 	<p class="tribe-events-back">
@@ -76,20 +74,12 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 
 	<?php echo $title; ?>
 
-
-	
-	
-
-
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
 		<?php if ( tribe_get_cost() ) : ?>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
 	</div>
-
-
-	
 
 	<!-- Event header -->
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
@@ -102,10 +92,6 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 			<!-- .tribe-events-sub-nav -->
 		</nav>
 	</div>
-
-
-
-
 	<!-- #tribe-events-header -->
 
 	<?php while ( have_posts() ) :  the_post(); ?>
@@ -117,9 +103,6 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 			<div class="tribe-events-single-event-description tribe-events-content">
 				<?php the_content(); ?>
-
-			
-				
 			</div>
 			<!-- .tribe-events-single-event-description -->
 			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
@@ -128,16 +111,9 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-	
-	
 		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
-
-	
-	
-	
-	
 
 	<!-- Event footer -->
 	<div id="tribe-events-footer">

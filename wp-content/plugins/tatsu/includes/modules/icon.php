@@ -65,9 +65,9 @@ if (!function_exists('tatsu_icon')) {
 		$hover_effect_parent = $alignment === 'none' && 'none' !== $hover_effect ? $hover_effect : '';
 		$hover_effect_child = $alignment !== 'none' && 'none' !== $hover_effect ? $hover_effect : '';
 
-
-
-
+		$href = ( empty( $href ) ) ? '#' : tatsu_parse_custom_fields( $href );
+		$video_url = tatsu_parse_custom_fields( $video_url );
+		
 		if( isset( $lightbox ) && 1 == $lightbox ) {
 			if( !empty( $video_url ) ) {
 				$mfp_class = 'mfp-iframe';
@@ -375,6 +375,7 @@ function tatsu_register_icon_module()
 		'type' => 'single',
 		'is_built_in' => false,
 		'hint' => 'name',
+		'is_dynamic' => true,
 		'group_atts' => array(
 			array(
 				'type'	=>	'tabs',

@@ -26,7 +26,7 @@ define( 'DB_NAME', 'bitnami_wordpress' );
 define( 'DB_USER', 'bn_wordpress' );
 
 /** Database password */
-define( 'DB_PASSWORD', '193ba068db' );
+define( 'DB_PASSWORD', 'c7af2d69c5' );
 
 /** Database hostname */
 define( 'DB_HOST', '127.0.0.1:3306' );
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'a7482636ab5d3cd5fc6c614a342434566345d8d10f7382fd0febd08f3853ed34');
-define('SECURE_AUTH_KEY',  'd2f5bbb506bc09e531008f12e32a4c6f5566a846a3d0c78af5f4f704ad828354');
-define('LOGGED_IN_KEY',    '19d5fc9c5c1e544ccc6eb2496139ae81ddae6cefb6bc071373ffd440f5cef7dd');
-define('NONCE_KEY',        '5d51f1b8f7d3e7c9e7c5b7762edd0e87907d81a38c85b87b7ee52468b73cd169');
-define('AUTH_SALT',        'd1b04e86001591ca6aaa2a0ff9ee0f83c4d1fb3f7de3839ad3f5d150a0cac44d');
-define('SECURE_AUTH_SALT', '27b592710c1a8d84d74355c9d06cbfaaad089e18dea89fe99ba97a1b138d8af2');
-define('LOGGED_IN_SALT',   '70aeffd50a0526dad011bff2202735ed9dc8764b2604eda11f844ae0b4f4da9e');
-define('NONCE_SALT',       'f808fe4dcb7789653e6a4cb4e64a0b76152d2cec7981494171b7edda57133ebf');
+define('AUTH_KEY',         'ff6b297ed8a0a45bafcb4769fb1ab0f7769acd1657f0df01dcd66940d5a4a367');
+define('SECURE_AUTH_KEY',  'd919a89e90c17ce0deb4dd2c0eff07e06cd0c5b2f44d48f4838ffe560a0a835b');
+define('LOGGED_IN_KEY',    '00afd2229bca78a19a7a2e37280ba0cef1559e8b7bfc343917d219488cfa7c65');
+define('NONCE_KEY',        'e22078588743105b6d6601eeb078037b271e4d09721fc632267b4593671dc15c');
+define('AUTH_SALT',        '89e69e4eca0c6bc03e7e9ee71513a9a1316dc00f09744a6c19b9a10c48d9affb');
+define('SECURE_AUTH_SALT', '1fbe765819ec003a576be243d3820cfd23859ee855228c16d5b2873494beebc9');
+define('LOGGED_IN_SALT',   'acf1b716e67d6df99c28b92ed50504b6aea86d283093e604549c78718c15c4ba');
+define('NONCE_SALT',       'ed47e013e0c8108dd63b95d425ec2e250265c9868d8400ec56b24364fe32ecd1');
 
 /**#@-*/
 
@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
 
-define('WP_TEMP_DIR', 'E:\Wordpress/apps/wordpress/tmp');
+define('WP_TEMP_DIR', 'D:\Julian\Data\Schule\Diplomarbeit\Website/apps/wordpress/tmp');
 
 
 //  Disable pingback.ping xmlrpc method to prevent Wordpress from participating in DDoS attacks

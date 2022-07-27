@@ -1,3 +1,8 @@
+v3.4.0 (12 July 2022)
+=====
+* Added: ACF and WordPress Dynamic Fields Support on 30 Modules.
+* Fixed: CSS issue on Tatsu Editor light mode.
+
 v3.3.14 (2 June 2022)
 =====
 * Added: Module Categories

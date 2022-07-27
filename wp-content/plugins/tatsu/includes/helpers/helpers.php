@@ -165,11 +165,18 @@ if(!function_exists('tatsu_module_preview_options')){
 	}
 }
 
-function is_tatsu_pro_active(){
-	return class_exists('Tatsu_Pro');
+function is_tatsu_pro_active() {
+	if ( ! function_exists( 'is_plugin_active' ) ) {
+		include_once ABSPATH . 'wp-admin/includes/plugin.php';
+	}
+	
+	if ( is_plugin_active( 'tatsu-pro/tatsu-pro.php' ) ) {
+		return true;
+	} 
+	return false;
 }
 
-function is_tatsu_authorized( ) {
+function is_tatsu_authorized() {
 	$tatsu_license = trim(get_option('tatsu_license_key'));
 	$tatsu_item_id = trim(get_option( 'tatsu_license_item_id' ));
 	if(empty($tatsu_license)|| empty($tatsu_item_id) || !is_tatsu_pro_active()){
@@ -1709,6 +1716,69 @@ if ( ! function_exists( 'tatsu_module_categories' ) ) {
 			'basic' => __( 'Basic', 'tatsu' ),
 		];
 		return apply_filters( 'tatsu_module_categories', $categories );
+	}
+}
+
+/**
+ * List ACF Fields and WP Functions values.
+ *
+ * @author Sayan Datta (@im_sayaan)
+ * @since  1.0.3
+ * 
+ * @return array
+ */
+if ( ! function_exists( 'tatsu_get_dynamic_values' ) ) {
+	function tatsu_get_dynamic_values() {
+		$values = [];
+
+		if( function_exists( 'tatsu_get_custom_fields' ) ) {
+			$values = array_merge( tatsu_get_custom_fields( true ), $values );
+		}
+
+		if( function_exists( 'tatsu_get_wp_functions' ) ) {
+			$values = array_merge( tatsu_get_wp_functions( true ), $values );
+		}
+
+		return apply_filters( 'tatsu_get_dynamic_values', $values );
+	}
+}
+
+/**
+ * List ACF Fields and WP Functions and prepare a group.
+ *
+ * @author Sayan Datta (@im_sayaan)
+ * @since  1.0.3
+ * 
+ * @return array
+ */
+if ( ! function_exists( 'tatsu_get_custom_fields_dropdown' ) ) {
+	function tatsu_get_custom_fields_dropdown() {
+		$fields = [
+			'default' => __( 'Custom', 'tatsu' ),
+			'pro' => __( 'Dynamic Fields (Pro)', 'tatsu' ),
+		];
+
+		return apply_filters( 'tatsu_get_custom_fields_dropdown', $fields );
+	}
+}
+
+/**
+ * Parse ACF and WP's custom fields and functions.
+ *
+ * @author Sayan Datta (@im_sayaan)
+ * @since  1.0.3
+ *
+ * @param string $content
+ * 
+ * @return string
+ */
+if ( ! function_exists( 'tatsu_parse_custom_fields' ) ) {
+	function tatsu_parse_custom_fields( $content ) {
+		if ( strpos( $content, 'acf/' ) === false && strpos( $content, 'wp/' ) === false ) {
+			return $content;
+		}
+
+		return apply_filters( 'tatsu_parse_custom_fields', $content );
 	}
 }
 
