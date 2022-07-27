@@ -1166,8 +1166,12 @@
                             stickyTopOffset = 32;
                         }
                         jQuery.each(tatsuStickyColumn,function(key,element){
+                            var stickyWidth = 767;
                             var jQueryObj = jQuery(element);
-                            if(jQuery(window).width() > 767 && !jQueryObj.closest('.tatsu-eq-cols').length ){
+                            if ( jQueryObj.hasClass('tatsu-column-tablet-no-sticky') ) {
+                                stickyWidth = 1024;
+                            }
+                            if(jQuery(window).width() > stickyWidth && !jQueryObj.closest('.tatsu-eq-cols').length ){
                                 jQueryObj.stick_in_parent({parent:'.tatsu-row', offset_top : stickyTopOffset})
                                 .on("sticky_kit:stick",function(e){
                                     jQuery(e.target).css( 'transition','none' );

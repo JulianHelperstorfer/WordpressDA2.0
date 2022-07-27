@@ -21,6 +21,7 @@ if ( !function_exists('tatsu_video') ) {
 		$animate = ( isset( $animate ) && 1 == $animate && 'none' !== $animation_type ) ? 'tatsu-animate' : '' ;
 		$data_animations = be_get_animation_data_atts( $atts );
 		$output ='';
+		$url = tatsu_parse_custom_fields( $url );
 
 	    switch ( $source ) {
 			case 'youtube':
@@ -119,6 +120,7 @@ function tatsu_register_video()
 		'is_built_in' => true,
 		'drag_handle' => true,
 		'hint' => 'source',
+		'is_dynamic' => true,
 		'group_atts'			=> array(
 			array(
 				'type'		=> 'tabs',

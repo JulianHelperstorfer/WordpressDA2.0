@@ -40,6 +40,8 @@ if( !function_exists( 'tatsu_icon_card' ) ) {
 
         extract($atts);
 
+		$url = tatsu_parse_custom_fields( $url );
+		$content = do_shortcode( $content );
 
         $custom_style_tag = be_generate_css_from_atts( $atts, $tag, $atts['key'], $builder_mode );
 		$unique_class_name = ' tatsu-'.$atts['key'];
@@ -107,11 +109,11 @@ if( !function_exists( 'tatsu_icon_card' ) ) {
                             <div class = "tatsu-icon_card-title <?php echo !empty($title_font) ? $title_font : ''; ?>">
 							<?php 
 								if(empty($url)){
-									echo $title;
+									echo tatsu_parse_custom_fields( $title );
 								}else{
 							?>
                                 <a href = "<?php echo $url; ?>" <?php echo $new_tab; ?> >
-                                    <?php echo $title; ?>
+                                    <?php echo tatsu_parse_custom_fields( $title ); ?>
                                 </a>
 							<?php } ?>
                             </div>
@@ -172,6 +174,7 @@ function tatsu_register_icon_card()
 		'type' => 'single',
 		'is_built_in' => true,
 		'hint' => 'title',
+		'is_dynamic' => true,
 		'group_atts' => array(
 			array(
 				'type'	=>	'tabs',

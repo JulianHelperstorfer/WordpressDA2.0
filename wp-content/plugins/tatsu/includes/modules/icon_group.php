@@ -87,6 +87,7 @@ function tatsu_register_icon_group()
 		'type' => 'multi',
 		'allowed_sub_modules' => array('tatsu_icon'),
 		'is_built_in' => false,
+		'is_dynamic' => true,
 		'group_atts' => array(
 			array(
 				'type'		=> 'tabs',

@@ -447,6 +447,9 @@ SVG Icons - svgicons.sparkk.fr
     flex: 0 0 auto;
 }
 
+.tatsu-tabs-menu-cols-1 > * {
+  width: 100%;
+}
 .tatsu-tabs-menu-cols-2 > * {
   width: 50%;
 }
