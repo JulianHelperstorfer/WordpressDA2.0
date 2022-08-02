@@ -6,21 +6,19 @@
 
 function child_theme_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() . '/style.css' , array('parent-style'));
-	//wp_enqueue_style( 'child-print-css', get_stylesheet_directory_uri() . '/print.css');
+	wp_enqueue_style( 'child-theme-css', get_stylesheet_directory_uri() .'/style.css' , array('parent-style'));
+	
 	}
-	add_action( 'wp_enqueue_scripts', 'child_theme_styles' );
-
-?>
+	add_action( 'wp_enqueue_scripts', 'child_theme_styles' );?>
 
 <?php
-function exponent_child_styles() {
+/*function exponent_child_styles() {
 wp_deregister_style( 'parent-style');
 wp_register_style('parent-style', get_template_directory_uri(). '/style.css');
 wp_enqueue_style('parent-style', get_template_directory_uri(). '/style.css');
 wp_enqueue_style( 'childtheme-style', get_stylesheet_directory_uri().'/style.css', array('parent-style') );
 }
-add_action( 'wp_enqueue_scripts', 'exponent_child_styles' );
+add_action( 'wp_enqueue_scripts', 'exponent_child_styles' );*/
 ?>
 
 <!-- Funktion um die Daten des Schulungsformulars zu bearbeiten -->

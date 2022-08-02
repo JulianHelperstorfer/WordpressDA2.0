@@ -3,7 +3,8 @@
   Erstellt am: 26.07.2022+08:10
   Geändert von:
   Geändert am:
-  Beschreibung: 
+  Beschreibung: Formular zum Bewerben eines Jobs, mit Feldern für grundlegende Informationen des Bewerbers, Auswahlfeldern für Bildungsabchluss und Berufserfahrung, Auswahlmöglichkeiten von beherrschten Programmiersprachen
+                und Upload-Feldern für Lebenslauf und weitere Dokumente
 -->
 
 <?php
