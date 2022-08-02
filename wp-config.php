@@ -26,7 +26,7 @@ define( 'DB_NAME', 'bitnami_wordpress' );
 define( 'DB_USER', 'bn_wordpress' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'c7af2d69c5' );
+ define( 'DB_PASSWORD', '193ba068db' );
 
 /** Database hostname */
 define( 'DB_HOST', '127.0.0.1:3306' );
@@ -82,7 +82,6 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
 
 
 /* That's all, stop editing! Happy publishing. */
