@@ -82,6 +82,7 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
+define('ALLOW_UNFILTERED_UPLOADS', true);
 
 
 

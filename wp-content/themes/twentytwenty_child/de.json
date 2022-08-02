@@ -1,0 +1,34 @@
+{
+   "Actions": {
+      "New": "Neu",
+      "Add": "Hinzufügen",
+      "Edit": "Anpassen",
+      "Delete": "Löschen",
+      "Apply": "Übernehmen",
+      "Close": "Schließen",
+      "Enable": "Aktivieren",
+      "Disable": "Deaktiveren",
+      "Yes": "Ja",
+      "No": "Nein"
+   },
+ 
+   "Menus": {
+      "Home": "Home",
+      "About": "Über",
+      "Contact": "Kontakt"
+   },
+    
+    "FormElements": {
+        "Salutation": "Anrede",
+        "Choose": "Auswählen",
+        "Mr": "Herr",
+        "Mrs": "Frau",
+        "Diverse": "Divers",
+        "NoInformation": "keine Angabe",
+        "Name": "Vorname",
+        "Lastname": "Nachname",
+        "EMail": "E-Mail",
+        "Message": "Nachricht"
+    }
+ 
+}
